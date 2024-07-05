@@ -34,3 +34,20 @@ const findMaxValue = (num: number[]): number => num.reduce((p: number, c: number
     return p
 })
 console.log(findMaxValue([1, 99, -80, 4, 5]));
+//Type Aliase
+type ProductObjectType = {
+    name: string;
+    price: number;
+    isAvailable: boolean;
+    quantity: number;
+}
+//Create an object and give it type annotation
+let productObject: ProductObjectType = {
+    name: "Laptop",
+    price: 100000,
+    quantity: 4,
+    isAvailable: true,
+}
+//Calculate price of all products in productObject
+let productPriceCalculator = (productObject: ProductObjectType) => productObject.price * productObject.quantity
+console.log(productPriceCalculator(productObject));
