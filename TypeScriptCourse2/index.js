@@ -21,4 +21,18 @@ console.log(isEven(4));
 let isDivisibleBy4and8 = (n) => {
     return n % 4 == 0 && n % 8 == 0;
 };
-console.log(isDivisibleBy4and8(9));
+console.log(isDivisibleBy4and8(8));
+//Q6:Write a function called isPalindrome that takes a string as a parameter and returns true if the string is a palindrome.
+const isPalindrome = (str) => str === str.split("").reverse().join("");
+console.log(isPalindrome("racecar"));
+//Q7:Find out average using function
+const calculatedAverage = (num) => (num.reduce((total, e) => total + e)) / num.length;
+console.log(calculatedAverage([1, 2, 3, 4, 5, 6, 0]));
+//Q8:Find out maximum number
+const findMaxValue = (num) => num.reduce((p, c) => {
+    if (p < c) {
+        p = c;
+    }
+    return p;
+});
+console.log(findMaxValue([1, 99, -80, 4, 5]));

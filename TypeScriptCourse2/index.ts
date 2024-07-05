@@ -20,3 +20,17 @@ let isDivisibleBy4and8 = (n: number): boolean => {
     return n % 4 == 0 && n % 8 == 0
 }
 console.log(isDivisibleBy4and8(8));
+//Q6:Write a function called isPalindrome that takes a string as a parameter and returns true if the string is a palindrome.
+const isPalindrome = (str: string): boolean => str === str.split("").reverse().join("");
+console.log(isPalindrome("racecar"));
+//Q7:Find out average using function
+const calculatedAverage = (num: number[]): number => (num.reduce((total: number, e: number) => total + e)) / num.length
+console.log(calculatedAverage([1, 2, 3, 4, 5, 6, 0]));
+//Q8:Find out maximum number
+const findMaxValue = (num: number[]): number => num.reduce((p: number, c: number) => {
+    if (p < c) {
+        p = c
+    }
+    return p
+})
+console.log(findMaxValue([1, 99, -80, 4, 5]));
