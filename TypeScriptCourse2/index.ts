@@ -51,3 +51,15 @@ let productObject: ProductObjectType = {
 //Calculate price of all products in productObject
 let productPriceCalculator = (productObject: ProductObjectType) => productObject.price * productObject.quantity
 console.log(productPriceCalculator(productObject));
+//Call Signature
+type Employee = {
+    name: string;
+    age: number;
+    intro: (country: string) => string
+}
+let employee1: Employee = {
+    name: "David",
+    age: 29,
+    intro: (country) => `My name is ${employee1.name}, I am from ${country} and I am ${employee1.age} years old`
+}
+console.log(employee1.intro("UK"));

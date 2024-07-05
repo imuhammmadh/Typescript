@@ -46,3 +46,9 @@ let productObject = {
 //Calculate price of all products in productObject
 let productPriceCalculator = (productObject) => productObject.price * productObject.quantity;
 console.log(productPriceCalculator(productObject));
+let employee1 = {
+    name: "David",
+    age: 29,
+    intro: (country) => `My name is ${employee1.name}, I am from ${country} and I am ${employee1.age} years old`
+};
+console.log(employee1.intro("UK"));
