@@ -36,3 +36,13 @@ const findMaxValue = (num) => num.reduce((p, c) => {
     return p;
 });
 console.log(findMaxValue([1, 99, -80, 4, 5]));
+//Create an object and give it type annotation
+let productObject = {
+    name: "Laptop",
+    price: 100000,
+    quantity: 4,
+    isAvailable: true,
+};
+//Calculate price of all products in productObject
+let productPriceCalculator = (productObject) => productObject.price * productObject.quantity;
+console.log(productPriceCalculator(productObject));
