@@ -63,3 +63,33 @@ let employee1: Employee = {
     intro: (country) => `My name is ${employee1.name}, I am from ${country} and I am ${employee1.age} years old`
 }
 console.log(employee1.intro("UK"));
+//Enum
+enum Perks {
+    pro = "pro",
+    user = "user",
+}
+type Credentials = {
+    username: string;
+    mail?: string;
+    age: number;
+    password: string;
+    perk: Perks;
+}
+let user1: Credentials = {
+    username: "abc",
+    mail: "abc@gmail.com",
+    age: 16,
+    password: "123",
+    perk: Perks.pro
+}
+let user2: Credentials = {
+    username: "efg",
+    mail: "efg@gmail.com",
+    age: 26,
+    password: "456",
+    perk: Perks.user
+}
+let login = (user: Credentials): string => {
+    return user.perk === Perks.pro ? `${user.username} is allowed to get Free Delivery` : `${user.username} will have to pay delivery charge `
+}
+console.log(login(user2));

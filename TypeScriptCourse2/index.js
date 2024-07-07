@@ -52,3 +52,27 @@ let employee1 = {
     intro: (country) => `My name is ${employee1.name}, I am from ${country} and I am ${employee1.age} years old`
 };
 console.log(employee1.intro("UK"));
+//Enum
+var Perks;
+(function (Perks) {
+    Perks["pro"] = "pro";
+    Perks["user"] = "user";
+})(Perks || (Perks = {}));
+let user1 = {
+    username: "abc",
+    mail: "abc@gmail.com",
+    age: 16,
+    password: "123",
+    perk: Perks.pro
+};
+let user2 = {
+    username: "efg",
+    mail: "efg@gmail.com",
+    age: 26,
+    password: "456",
+    perk: Perks.user
+};
+let login = (user) => {
+    return user.perk === Perks.pro ? `${user.username} is allowed to get Free Delivery` : `${user.username} will have to pay delivery charge `;
+};
+console.log(login(user2));
