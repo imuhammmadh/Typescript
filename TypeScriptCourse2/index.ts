@@ -122,3 +122,17 @@ let union = (value: string | number): string | number => {
     return value
 }
 console.log(union(33));
+//Intersections
+type User = {
+    name: string;
+    age: number;
+}
+type UserLocation = {
+    city: string;
+    pincode: number
+}
+let userBasicInfo: User & UserLocation = { name: "muhammad", age: 15, city: "Jaipur", pincode: 302034 }
+let createUserProfile = (user: User & UserLocation): string => {
+    return `My name is ${user.name} and I am from ${user.city}`
+}
+console.log(createUserProfile(userBasicInfo));

@@ -102,3 +102,8 @@ let union = (value) => {
     return value;
 };
 console.log(union(33));
+let userBasicInfo = { name: "muhammad", age: 15, city: "Jaipur", pincode: 302034 };
+let createUserProfile = (user) => {
+    return `My name is ${user.name} and I am from ${user.city}`;
+};
+console.log(createUserProfile(userBasicInfo));
