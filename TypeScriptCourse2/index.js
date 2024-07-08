@@ -91,6 +91,20 @@ let productValueCounter = (product) => {
     return `${productName}'s price is $${price} and ${quantity} are remaining in stock`;
 };
 console.log(productValueCounter(product1));
+let englishGrades = ["English", 90];
+let mathsGrades = ["Maths", 80];
+let Science = ["Science", 98];
+let gradeCalculator = (grade) => {
+    let [subject, percent] = grade;
+    return `${subject}:${percent}`;
+};
+console.log(gradeCalculator(englishGrades));
+let jaipurWeather = ["Jaipur", 32, "Cloudy"];
+let weatherApp = (weather) => {
+    let [city, temperature, condition] = weather;
+    return `Temperature in ${city} is ${temperature} and it's ${condition}`;
+};
+console.log(weatherApp(jaipurWeather));
 //Unions
 let union = (value) => {
     if (typeof value === "string") {

@@ -103,7 +103,7 @@ let licenseChecker = (person: PersonInfo): string => {
     return `My name is ${name} and I am ${age} years older ${boolean ? "and I have Driving License" : "and I don't have license"}`
 }
 console.log(licenseChecker(person1));
-//Q9:You are building a simple e-commerce application and need to store product information. Define a tuple type called ProductInfo to represent each product, containing the following elements:
+//Q9:You are building a simple e-commerce application and need to store product information. Define a tuple type called ProductInfo to represent each product.
 type ProductInfo = [string, number, number]
 let product1: ProductInfo = ["Laptop", 1000, 10]
 let product2: ProductInfo = ["iPhone", 1200, 13]
@@ -112,6 +112,24 @@ let productValueCounter = (product: ProductInfo): string => {
     return `${productName}'s price is $${price} and ${quantity} are remaining in stock`
 }
 console.log(productValueCounter(product1));
+//Q10:You are creating a student management system and want to keep track of student grades for different subjects. Define a tuple type called SubjectGrade to represent a subject and its corresponding grade
+type SubjectGrade = [string, number]
+let englishGrades: SubjectGrade = ["English", 90]
+let mathsGrades: SubjectGrade = ["Maths", 80]
+let Science: SubjectGrade = ["Science", 98]
+let gradeCalculator = (grade: SubjectGrade): string => {
+    let [subject, percent] = grade
+    return `${subject}:${percent}`
+}
+console.log(gradeCalculator(englishGrades));
+//Q11:You are working on a weather application, and you need to store weather data for different cities. Define a tuple type called WeatherData to represent the weather information
+type WeatherData = [string, number, string]
+let jaipurWeather: WeatherData = ["Jaipur", 32, "Cloudy"]
+let weatherApp = (weather: WeatherData): string => {
+    let [city, temperature, condition] = weather
+    return `Temperature in ${city} is ${temperature} and it's ${condition}`
+}
+console.log(weatherApp(jaipurWeather));
 //Unions
 let union = (value: string | number): string | number => {
     if (typeof value === "string") {
