@@ -121,3 +121,22 @@ let createUserProfile = (user) => {
     return `My name is ${user.name} and I am from ${user.city}`;
 };
 console.log(createUserProfile(userBasicInfo));
+var AccountType;
+(function (AccountType) {
+    AccountType["savings"] = "savings";
+    AccountType["current"] = "current";
+    AccountType["overdraft"] = "overdraft";
+})(AccountType || (AccountType = {}));
+let bankUser = { name: "Muhammad", age: 16, id: 23674 };
+let accountInfo = { accountnumber: 82302842, accountType: AccountType.current, balance: 30000 };
+let bankData = (user, account) => {
+    return {
+        name: user.name,
+        age: user.age,
+        id: user.id,
+        accountnumber: account.accountnumber,
+        accountType: account.accountType,
+        balance: account.balance,
+    };
+};
+console.log(bankData(bankUser, accountInfo));

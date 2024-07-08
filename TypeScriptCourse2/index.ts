@@ -154,3 +154,32 @@ let createUserProfile = (user: User & UserLocation): string => {
     return `My name is ${user.name} and I am from ${user.city}`
 }
 console.log(createUserProfile(userBasicInfo));
+//Q12:Combine User and Account Data
+type BankUserInfo = {
+    name: string;
+    age: number;
+    id: number;
+}
+enum AccountType {
+    savings = "savings",
+    current = "current",
+    overdraft = "overdraft"
+}
+type BankAccountInfo = {
+    accountnumber: number;
+    accountType: AccountType;
+    balance: number;
+}
+let bankUser: BankUserInfo = { name: "Muhammad", age: 16, id: 23674 }
+let accountInfo: BankAccountInfo = { accountnumber: 82302842, accountType: AccountType.current, balance: 30000 }
+let bankData = (user: BankUserInfo, account: BankAccountInfo): BankUserInfo & BankAccountInfo => {
+    return {
+        name: user.name,
+        age: user.age,
+        id: user.id,
+        accountnumber: account.accountnumber,
+        accountType: account.accountType,
+        balance: account.balance,
+    }
+}
+console.log(bankData(bankUser, accountInfo));
