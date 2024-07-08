@@ -88,6 +88,17 @@ let product1 = ["Laptop", 1000, 10];
 let product2 = ["iPhone", 1200, 13];
 let productValueCounter = (product) => {
     let [productName, price, quantity] = product;
-    return `${productName} is of $${price} and ${quantity} are remaining in stock`;
+    return `${productName}'s price is $${price} and ${quantity} are remaining in stock`;
 };
 console.log(productValueCounter(product1));
+//Unions
+let union = (value) => {
+    if (typeof value === "string") {
+        return value.toUpperCase();
+    }
+    else if (typeof value === "number") {
+        return value * 2;
+    }
+    return value;
+};
+console.log(union(33));

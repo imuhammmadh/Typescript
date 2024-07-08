@@ -112,3 +112,13 @@ let productValueCounter = (product: ProductInfo): string => {
     return `${productName}'s price is $${price} and ${quantity} are remaining in stock`
 }
 console.log(productValueCounter(product1));
+//Unions
+let union = (value: string | number): string | number => {
+    if (typeof value === "string") {
+        return value.toUpperCase()
+    } else if (typeof value === "number") {
+        return value * 2
+    }
+    return value
+}
+console.log(union(33));
