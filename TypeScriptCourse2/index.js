@@ -1,4 +1,5 @@
 "use strict";
+//Type Annotations
 //Q1:Declare a variable longText of type string and assign it a long sentence. Extract the first 10 characters from longText and store them in a variable called shortText.
 let longText = "qwertyuiopasdfghjklzxcvbnm0123456789*/+-.";
 let shortText = longText.substring(0, 10);
@@ -9,9 +10,9 @@ let str2 = "def";
 let result = str1 === str2;
 console.log(result);
 //Q3:Declare variables product and price of type string and number, respectively. Create a string using template literals to display the product and its price in the format "The product {product} is priced at {price} Rupees.
-let product = "Laptop";
-let price = 100000;
-console.log(`The product ${product} is priced at ${price} Rupees`);
+let prod = "Laptop";
+let p = 100000;
+console.log(`The product ${prod} is priced at ${p} Rupees`);
 //Q4:Write a TypeScript function called isEven that takes a number as a parameter and returns true if the number is even and false otherwise
 function isEven(n) {
     return n % 2 === 0;
@@ -76,3 +77,17 @@ let login = (user) => {
     return user.perk === Perks.pro ? `${user.username} is allowed to get Free Delivery` : `${user.username} will have to pay delivery charge `;
 };
 console.log(login(user2));
+let person1 = ["abc", 19, true];
+let person2 = ["efg", 15, false];
+let licenseChecker = (person) => {
+    let [name, age, boolean] = person;
+    return `My name is ${name} and I am ${age} years older ${boolean ? "and I have Driving License" : "and I don't have license"}`;
+};
+console.log(licenseChecker(person1));
+let product1 = ["Laptop", 1000, 10];
+let product2 = ["iPhone", 1200, 13];
+let productValueCounter = (product) => {
+    let [productName, price, quantity] = product;
+    return `${productName} is of $${price} and ${quantity} are remaining in stock`;
+};
+console.log(productValueCounter(product1));
