@@ -183,3 +183,8 @@ let bankData = (user: BankUserInfo, account: BankAccountInfo): BankUserInfo & Ba
     }
 }
 console.log(bankData(bankUser, accountInfo));
+//Generics
+function genericsFuntion<T, U>(a: T, b: U) {
+    return b
+}
+console.log(genericsFuntion<number, string>(3, "Hi"));

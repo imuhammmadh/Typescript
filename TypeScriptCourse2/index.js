@@ -140,3 +140,8 @@ let bankData = (user, account) => {
     };
 };
 console.log(bankData(bankUser, accountInfo));
+//Generics
+function genericsFuntion(a, b) {
+    return b;
+}
+console.log(genericsFuntion(3, "Hi"));
